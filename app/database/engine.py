@@ -19,6 +19,6 @@ async def drop_db():
         await conn.run_sync(Base.metadata.drop_all)
 
 
-async def start_up_app():
+async def start_up_db():
     await drop_db()
     await create_db()

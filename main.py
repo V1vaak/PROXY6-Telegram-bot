@@ -5,7 +5,7 @@ from aiogram import Bot, Dispatcher
 
 from app.middlewares.db import DataBaseSession
 
-from app.database.engine import start_up_app, create_db, async_session
+from app.database.engine import start_up_db, create_db, async_session
 
 from app.services.proxy6.engine import on_startup, on_shutdown
 
@@ -29,7 +29,7 @@ dp.shutdown.register(on_shutdown)
 
 async def main():
     # await create_db()
-    # await start_up_app()
+    # await start_up_db()
     # await bot.delete_my_commands(scope=types.BotCommandScopeAllPrivateChats())
     dp.update.middleware(DataBaseSession(session_pool=async_session))
     await bot.delete_webhook(drop_pending_updates=True)

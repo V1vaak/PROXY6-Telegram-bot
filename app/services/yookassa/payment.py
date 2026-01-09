@@ -44,12 +44,12 @@ def cancel_payment(payment_id: str):
     res = Payment.cancel(payment_id)
 
 
-def payment_confirmation(payment_id: str):
+def payment_confirmation(payment_id: str, value: str):
     idempotence_key = str(uuid.uuid4())
     response = Payment.capture(payment_id,
                                 {
                                  "amount": {
-                                    "value": "2.00",
+                                    "value": value,
                                     "currency": "RUB"
                                     }
                                 },
