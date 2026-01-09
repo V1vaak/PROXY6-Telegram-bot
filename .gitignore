@@ -2,6 +2,5 @@ __pycache__/
 .venv/
 .env
 .git/
-.gitignore
 .vscode/
 base.db
