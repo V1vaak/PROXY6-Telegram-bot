@@ -63,7 +63,29 @@ async def get_price_cache(
     period: int,
     session: AsyncSession
 ) -> PriceCache | None:
-    
+    """
+    Получает кэшированную цену прокси из базы данных.
+
+    Выполняет поиск записи в таблице ``price_cache`` по комбинации
+    версии прокси, количества и периода аренды.
+
+    Parameters
+    ----------
+    proxy_version : int
+        Версия прокси (например: 4 — IPv4, 6 — IPv6).
+    count : int
+        Количество прокси.
+    period : int
+        Период аренды в днях.
+    session : AsyncSession
+        Асинхронная сессия SQLAlchemy.
+
+    Returns
+    -------
+    PriceCache | None
+        Объект ``PriceCache`` при наличии записи в кэше,
+        иначе ``None``.
+    """
     result = await session.scalar(
         select(PriceCache).where(
             PriceCache.proxy_version == proxy_version,
@@ -74,6 +96,7 @@ async def get_price_cache(
     return result
 
 
+
 async def save_price_cache(
     *,
     proxy_version: int,
@@ -82,7 +105,31 @@ async def save_price_cache(
     price_rub: float,
     session: AsyncSession
 ) -> None:
-    
+    """
+    Сохраняет или обновляет кэшированную цену прокси в базе данных.
+
+    Если запись с указанной комбинацией параметров уже существует,
+    её цена и время обновления перезаписываются. В противном случае
+    создаётся новая запись в таблице ``price_cache``.
+
+    Parameters
+    ----------
+    proxy_version : int
+        Версия прокси (например: 4 — IPv4, 6 — IPv6).
+    count : int
+        Количество прокси.
+    period : int
+        Период аренды в днях.
+    price_rub : float
+        Цена в рублях.
+    session : AsyncSession
+        Асинхронная сессия SQLAlchemy.
+
+    Returns
+    -------
+    None
+        Функция не возвращает значение.
+    """
     cache = await get_price_cache(
         proxy_version=proxy_version,
         count=count,
