@@ -72,7 +72,7 @@ async def get_price_cache(
     Parameters
     ----------
     proxy_version : int
-        Версия прокси (например: 4 — IPv4, 6 — IPv6).
+        Версия прокси (например: 4 — IPv4, 3 — IPv4 Shared, 6 — IPv6).
     count : int
         Количество прокси.
     period : int
@@ -115,7 +115,7 @@ async def save_price_cache(
     Parameters
     ----------
     proxy_version : int
-        Версия прокси (например: 4 — IPv4, 6 — IPv6).
+        Версия прокси (например: 4 — IPv4, 3 — IPv4 Shared, 6 — IPv6).
     count : int
         Количество прокси.
     period : int
