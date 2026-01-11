@@ -3,8 +3,7 @@
 ![Python](https://img.shields.io/badge/python-3.10+-blue.svg)
 ![Aiogram](https://img.shields.io/badge/aiogram-3.x-green.svg)
 ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-2.0+-red.svg)
-![AIOHTTP](https://img.shields.io/badge/aiohttp-3.9+-blueviolet.svg)
-![Requests](https://img.shields.io/badge/requests-2.31+-orange.svg)
+![Proxy6 API](https://img.shields.io/badge/Proxy6-API-orange.svg)
 ![Yookassa](https://img.shields.io/badge/yookassa-3.0+-brightgreen.svg)
 ![AIOSQLite](https://img.shields.io/badge/aiosqlite-0.20+-9cf.svg)
 ![python-dotenv](https://img.shields.io/badge/python--dotenv-1.0+-ff69b4.svg)
@@ -14,6 +13,7 @@
 Telegram-бот для покупки и управления прокси через сервис Proxy6 с интеграцией платежей ЮKassa.
 
 ## 📋 Содержание
+- [🔗 Полезные ссылки](#-полезные-ссылки)
 - [⚙️ Установка](#️-установка)
 - [🚀 Запуск](#-запуск)
 - [📊 База данных](#-база-данных)
@@ -21,8 +21,21 @@ Telegram-бот для покупки и управления прокси че�
 - [🏗️ Архитектура](#-архитектура)
 - [🔧 Конфигурация](#-конфигурация)
 - [📄 Лицензия](#-лицензия)
-- [📞 Контакты](#-контакты)
-- [🔗 Полезные ссылки](#-полезные-ссылки)
+
+## 🔗 Полезные ссылки
+
+#### Документация
+
+- [📚 Документация Aiogram 3.x](https://docs.aiogram.dev/)
+- [🌐 Proxy6 API Documentation](https://px6.me/ru/developers)
+- [💳 ЮKassa API Documentation](https://yookassa.ru/developers/api)
+- [🐍 SQLAlchemy 2.0 Documentation](https://docs.sqlalchemy.org/)
+
+#### API ключи
+- [Telegram Bot Token](https://t.me/BotFather)
+- [Proxy6 API Key](https://px6.me/ru/user/developers)
+- [ЮKassa Ключи](https://yookassa.ru/my/)
+
 
 
 ## ⚙️ Установка
@@ -155,22 +168,13 @@ DATABASE_URL=sqlite+aiosqlite:///database.db
 
 Распространяется под лицензией MIT. Подробнее см. в файле [`LICENSE`](LICENSE).
 
-## <img src="image_for_readme/image_con.png" width="40" height="40" alt="" style="margin-bottom: -8px;"> Контакты
 
-- **Автор:** [V1vaak](https://github.com/V1vaak)
-- **Telegram:** [@novikovyo](https://t.me/novikovyo)
+---
 
+<div align="center">
 
-## 🔗 Полезные ссылки
+**Разработано с ❤️ [V1vaak](https://github.com/V1vaak)**
 
-### Документация
+[📧 Telegram](https://t.me/novikovyo) | [💻 GitHub](https://github.com/V1vaak) | [🚀 Другие проекты](https://github.com/V1vaak?tab=repositories)
 
-- [📚 Документация Aiogram 3.x](https://docs.aiogram.dev/)
-- [🌐 Proxy6 API Documentation](https://px6.me/ru/developers)
-- [💳 ЮKassa API Documentation](https://yookassa.ru/developers/api)
-- [🐍 SQLAlchemy 2.0 Documentation](https://docs.sqlalchemy.org/)
-
-### API ключи
-- [Telegram Bot Token](https://t.me/BotFather)
-- [Proxy6 API Key](https://px6.me/ru/user/developers)
-- [ЮKassa Ключи](https://yookassa.ru/my/)
+</div>
