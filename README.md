@@ -42,8 +42,8 @@ Telegram-бот для покупки и управления прокси че�
 
 ### 1. Клонирование репозитория
 ```bash
-git clone https://github.com/V1vaak/PROXY6-Telegram-bot.git
-cd PROXY6-Telegram-bot
+git clone https://github.com/V1vaak/proxy6-telegram-bot.git
+cd proxy6-telegram-bot
 ```
 
 ### 2. Настройка окружения
